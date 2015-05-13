@@ -9,6 +9,7 @@ import Foundation
     
     optional func collectionView(collectionView: UICollectionView, layout: QuiltLayout, insetsForItemAtIndexPath indexPath: NSIndexPath) -> UIEdgeInsets
     optional func collectionView(collectionView: UICollectionView, layout: QuiltLayout, blockSizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
+    optional func collectionViewDidFinishLayout(collectionView: UICollectionView, layout: QuiltLayout)
 }
 
 public class QuiltLayout: UICollectionViewLayout {
@@ -130,6 +131,7 @@ public class QuiltLayout: UICollectionViewLayout {
                 size: cv.frame.size)
             var unrestrictedRow = 1 + Int(isVertical ? CGRectGetMaxY(scrollFrame) / blockPixels.height : CGRectGetMaxX(scrollFrame) / blockPixels.width)
             fillInBlocks(toUnrestrictedRow: prelayoutEverything ? Int.max : unrestrictedRow)
+            delegate?.collectionViewDidFinishLayout?(cv, layout: self)
         }
     }
     
