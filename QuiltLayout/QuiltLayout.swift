@@ -31,8 +31,12 @@ public class QuiltLayout: UICollectionViewLayout {
     
     
     private func setFurthestBlockPoint(newValue: CGPoint) {
-        self.furthestBlockPoint.x = max(self.furthestBlockPoint.x, newValue.x)
-        self.furthestBlockPoint.y = max(self.furthestBlockPoint.y, newValue.y)
+        furthestBlockPoint.x = max(furthestBlockPoint.x, newValue.x)
+        furthestBlockPoint.y = max(furthestBlockPoint.y, newValue.y)
+    }
+    
+    public func layoutHeight() -> CGFloat {
+        return furthestBlockPoint.y + blockPixels.height
     }
     
     private var firstOpenSpace = CGPointZero
