@@ -4,3 +4,7 @@ framework module QuiltLayout {
   export *
   module * { export * }
 }
+
+module QuiltLayout.Swift {
+    header "QuiltLayout-Swift.h"
+}

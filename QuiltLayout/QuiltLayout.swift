@@ -5,34 +5,36 @@
 import Foundation
 
 
-@objc protocol QuiltLayoutDelegate {
+@objc public protocol QuiltLayoutDelegate {
     
     optional func collectionView(collectionView: UICollectionView, layout: QuiltLayout, insetsForItemAtIndexPath indexPath: NSIndexPath) -> UIEdgeInsets
     optional func collectionView(collectionView: UICollectionView, layout: QuiltLayout, blockSizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
 }
 
-class QuiltLayout: UICollectionViewLayout {
+public class QuiltLayout: UICollectionViewLayout {
     
-    var direction: UICollectionViewScrollDirection = .Vertical {
+    public var direction: UICollectionViewScrollDirection = .Vertical {
         didSet {
             invalidateLayout()
         }
     }
-    var blockPixels = CGSize(width: 100, height: 100) {
+    public var blockPixels = CGSize(width: 100, height: 100) {
         didSet {
             invalidateLayout()
         }
     }
-    var prelayoutEverything = true
-    var delegate: QuiltLayoutDelegate?
+    public var prelayoutEverything = true
+    public var delegate: QuiltLayoutDelegate?
     
-    private var furthestBlockPoint: CGPoint {
-        get { return self.furthestBlockPoint}
-        set {
-            self.furthestBlockPoint.x = max(self.furthestBlockPoint.x, newValue.x)
-            self.furthestBlockPoint.y = max(self.furthestBlockPoint.y, newValue.y)
-        }
+    
+    private var furthestBlockPoint = CGPointZero
+    
+    
+    private func setFurthestBlockPoint(newValue: CGPoint) {
+        self.furthestBlockPoint.x = max(self.furthestBlockPoint.x, newValue.x)
+        self.furthestBlockPoint.y = max(self.furthestBlockPoint.y, newValue.y)
     }
+    
     private var firstOpenSpace = CGPointZero
     private var previousLayoutRect = CGRectZero
     private var lastIndexPathPlaced: NSIndexPath?
@@ -40,7 +42,7 @@ class QuiltLayout: UICollectionViewLayout {
     private var indexPathByPosition: [NSNumber: [NSNumber: NSIndexPath]]?
     private var positionByIndexPath: [NSNumber: [NSNumber: NSValue]]?
     
-    override func collectionViewContentSize() -> CGSize {
+    public override func collectionViewContentSize() -> CGSize {
         
         let isVertical = direction == .Vertical
         if let cv = collectionView {
@@ -54,7 +56,7 @@ class QuiltLayout: UICollectionViewLayout {
         return CGSizeZero
     }
     
-    override func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject]? {
+    public override func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject]? {
         if CGRectEqualToRect(rect, previousLayoutRect) {
             return previousLayoutAttributes
         }
@@ -82,7 +84,7 @@ class QuiltLayout: UICollectionViewLayout {
         return previousLayoutAttributes
     }
     
-    override func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes! {
+    public override func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes! {
         var insets = delegate?.collectionView?(collectionView!, layout: self, insetsForItemAtIndexPath: indexPath) ?? UIEdgeInsetsZero
         var rect = frame(forIndexPath: indexPath)
         var attributes = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath)
@@ -90,11 +92,11 @@ class QuiltLayout: UICollectionViewLayout {
         return attributes
     }
     
-    override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
+    public override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
         return !CGSizeEqualToSize(newBounds.size, collectionView!.frame.size)
     }
     
-    override func prepareForCollectionViewUpdates(updateItems: [AnyObject]!) {
+    public override func prepareForCollectionViewUpdates(updateItems: [AnyObject]!) {
         super.prepareForCollectionViewUpdates(updateItems)
         for item in updateItems as! [UICollectionViewUpdateItem] {
             if item.updateAction == .Insert || item.updateAction == .Move {
@@ -103,7 +105,7 @@ class QuiltLayout: UICollectionViewLayout {
         }
     }
     
-    override func invalidateLayout() {
+    public override func invalidateLayout() {
         super.invalidateLayout()
         furthestBlockPoint = CGPointZero
         firstOpenSpace = CGPointZero
@@ -113,7 +115,7 @@ class QuiltLayout: UICollectionViewLayout {
         clearPositions()
     }
     
-    override func prepareLayout() {
+    public override func prepareLayout() {
         super.prepareLayout()
         if delegate == nil {
             return
@@ -253,7 +255,7 @@ class QuiltLayout: UICollectionViewLayout {
             self.traverseTiles(forPoint: blockOrigin, withSize: size, iterator: {
                 [unowned self] blockPoint in
                 self.set(position: blockPoint, forIndexPath: indexPath)
-                self.furthestBlockPoint = blockPoint
+                self.setFurthestBlockPoint(blockPoint)
                 return true
             })
             return false
@@ -329,7 +331,7 @@ class QuiltLayout: UICollectionViewLayout {
         if let cv = collectionView {
             blockSize = delegate?.collectionView?(cv, layout: self, blockSizeForItemAtIndexPath: indexPath) ?? blockSize
         }
-        return CGSizeZero
+        return blockSize
     }
     
     private func traverseTilesBetween(unrestrictedDimensionStart start: Int, unrestrictedDimensionEnd end: Int, iterator: (CGPoint) -> Bool) -> Bool {

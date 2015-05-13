@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/QuiltLayout-Swift.h</key>
+		<data>
+		+KQeIOji3OUi4Y6cCULTXLVoI5k=
+		</data>
 		<key>Headers/QuiltLayout.h</key>
 		<data>
 		x95bxBt7l5CoCzMXibrXOShqGbU=
@@ -12,20 +16,56 @@
 		<data>
 		gnAY5RBTIIIaFVIJmuYdB5RBqck=
 		</data>
+		<key>Modules/QuiltLayout.swiftmodule/arm.swiftdoc</key>
+		<data>
+		c1q9SMXXpgWZKfeGOCTEL+WgRC8=
+		</data>
+		<key>Modules/QuiltLayout.swiftmodule/arm.swiftmodule</key>
+		<data>
+		ONVjRCEouBTW9dUejSBjjCoTcyI=
+		</data>
+		<key>Modules/QuiltLayout.swiftmodule/arm64.swiftdoc</key>
+		<data>
+		LIgIf6yCFeWEtxiiOX0TVK2oNdo=
+		</data>
+		<key>Modules/QuiltLayout.swiftmodule/arm64.swiftmodule</key>
+		<data>
+		gTeaSy+RnOf12Yrhy9wUwv1oHUQ=
+		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		eObye74pPZCZ4gljsjkEJyHJnVE=
+		3urv3aTAwfiYTd4tCKjrlH4vjEc=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/QuiltLayout-Swift.h</key>
+		<data>
+		+KQeIOji3OUi4Y6cCULTXLVoI5k=
+		</data>
 		<key>Headers/QuiltLayout.h</key>
 		<data>
 		x95bxBt7l5CoCzMXibrXOShqGbU=
 		</data>
+		<key>Modules/QuiltLayout.swiftmodule/arm.swiftdoc</key>
+		<data>
+		c1q9SMXXpgWZKfeGOCTEL+WgRC8=
+		</data>
+		<key>Modules/QuiltLayout.swiftmodule/arm.swiftmodule</key>
+		<data>
+		ONVjRCEouBTW9dUejSBjjCoTcyI=
+		</data>
+		<key>Modules/QuiltLayout.swiftmodule/arm64.swiftdoc</key>
+		<data>
+		LIgIf6yCFeWEtxiiOX0TVK2oNdo=
+		</data>
+		<key>Modules/QuiltLayout.swiftmodule/arm64.swiftmodule</key>
+		<data>
+		gTeaSy+RnOf12Yrhy9wUwv1oHUQ=
+		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		eObye74pPZCZ4gljsjkEJyHJnVE=
+		3urv3aTAwfiYTd4tCKjrlH4vjEc=
 		</data>
 	</dict>
 	<key>rules</key>
