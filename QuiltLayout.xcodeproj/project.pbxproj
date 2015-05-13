@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26F372E41B021C4E00455F47 /* QuiltLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 26F372E31B021C4E00455F47 /* QuiltLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26F372EA1B021C4E00455F47 /* QuiltLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F372DE1B021C4E00455F47 /* QuiltLayout.framework */; };
+		26F372F11B021C4E00455F47 /* QuiltLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F372F01B021C4E00455F47 /* QuiltLayoutTests.swift */; };
+		26F372FB1B021CF200455F47 /* QuiltLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F372FA1B021CF200455F47 /* QuiltLayout.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		26F372EB1B021C4E00455F47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26F372D51B021C4E00455F47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26F372DD1B021C4E00455F47;
+			remoteInfo = QuiltLayout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		26F372DE1B021C4E00455F47 /* QuiltLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuiltLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26F372E21B021C4E00455F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26F372E31B021C4E00455F47 /* QuiltLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuiltLayout.h; sourceTree = "<group>"; };
+		26F372E91B021C4E00455F47 /* QuiltLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuiltLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26F372EF1B021C4E00455F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26F372F01B021C4E00455F47 /* QuiltLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuiltLayoutTests.swift; sourceTree = "<group>"; };
+		26F372FA1B021CF200455F47 /* QuiltLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuiltLayout.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26F372DA1B021C4E00455F47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26F372E61B021C4E00455F47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26F372EA1B021C4E00455F47 /* QuiltLayout.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26F372D41B021C4E00455F47 = {
+			isa = PBXGroup;
+			children = (
+				26F372E01B021C4E00455F47 /* QuiltLayout */,
+				26F372ED1B021C4E00455F47 /* QuiltLayoutTests */,
+				26F372DF1B021C4E00455F47 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		26F372DF1B021C4E00455F47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26F372DE1B021C4E00455F47 /* QuiltLayout.framework */,
+				26F372E91B021C4E00455F47 /* QuiltLayoutTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26F372E01B021C4E00455F47 /* QuiltLayout */ = {
+			isa = PBXGroup;
+			children = (
+				26F372E31B021C4E00455F47 /* QuiltLayout.h */,
+				26F372E11B021C4E00455F47 /* Supporting Files */,
+				26F372FA1B021CF200455F47 /* QuiltLayout.swift */,
+			);
+			path = QuiltLayout;
+			sourceTree = "<group>";
+		};
+		26F372E11B021C4E00455F47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				26F372E21B021C4E00455F47 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		26F372ED1B021C4E00455F47 /* QuiltLayoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				26F372F01B021C4E00455F47 /* QuiltLayoutTests.swift */,
+				26F372EE1B021C4E00455F47 /* Supporting Files */,
+			);
+			path = QuiltLayoutTests;
+			sourceTree = "<group>";
+		};
+		26F372EE1B021C4E00455F47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				26F372EF1B021C4E00455F47 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		26F372DB1B021C4E00455F47 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26F372E41B021C4E00455F47 /* QuiltLayout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		26F372DD1B021C4E00455F47 /* QuiltLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26F372F41B021C4E00455F47 /* Build configuration list for PBXNativeTarget "QuiltLayout" */;
+			buildPhases = (
+				26F372D91B021C4E00455F47 /* Sources */,
+				26F372DA1B021C4E00455F47 /* Frameworks */,
+				26F372DB1B021C4E00455F47 /* Headers */,
+				26F372DC1B021C4E00455F47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuiltLayout;
+			productName = QuiltLayout;
+			productReference = 26F372DE1B021C4E00455F47 /* QuiltLayout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		26F372E81B021C4E00455F47 /* QuiltLayoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26F372F71B021C4E00455F47 /* Build configuration list for PBXNativeTarget "QuiltLayoutTests" */;
+			buildPhases = (
+				26F372E51B021C4E00455F47 /* Sources */,
+				26F372E61B021C4E00455F47 /* Frameworks */,
+				26F372E71B021C4E00455F47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26F372EC1B021C4E00455F47 /* PBXTargetDependency */,
+			);
+			name = QuiltLayoutTests;
+			productName = QuiltLayoutTests;
+			productReference = 26F372E91B021C4E00455F47 /* QuiltLayoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		26F372D51B021C4E00455F47 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Zalando;
+				TargetAttributes = {
+					26F372DD1B021C4E00455F47 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					26F372E81B021C4E00455F47 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 26F372D81B021C4E00455F47 /* Build configuration list for PBXProject "QuiltLayout" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 26F372D41B021C4E00455F47;
+			productRefGroup = 26F372DF1B021C4E00455F47 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26F372DD1B021C4E00455F47 /* QuiltLayout */,
+				26F372E81B021C4E00455F47 /* QuiltLayoutTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		26F372DC1B021C4E00455F47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26F372E71B021C4E00455F47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26F372D91B021C4E00455F47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26F372FB1B021CF200455F47 /* QuiltLayout.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26F372E51B021C4E00455F47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26F372F11B021C4E00455F47 /* QuiltLayoutTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		26F372EC1B021C4E00455F47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26F372DD1B021C4E00455F47 /* QuiltLayout */;
+			targetProxy = 26F372EB1B021C4E00455F47 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		26F372F21B021C4E00455F47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		26F372F31B021C4E00455F47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		26F372F51B021C4E00455F47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = QuiltLayout/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		26F372F61B021C4E00455F47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = QuiltLayout/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		26F372F81B021C4E00455F47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QuiltLayoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		26F372F91B021C4E00455F47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QuiltLayoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26F372D81B021C4E00455F47 /* Build configuration list for PBXProject "QuiltLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26F372F21B021C4E00455F47 /* Debug */,
+				26F372F31B021C4E00455F47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26F372F41B021C4E00455F47 /* Build configuration list for PBXNativeTarget "QuiltLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26F372F51B021C4E00455F47 /* Debug */,
+				26F372F61B021C4E00455F47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		26F372F71B021C4E00455F47 /* Build configuration list for PBXNativeTarget "QuiltLayoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26F372F81B021C4E00455F47 /* Debug */,
+				26F372F91B021C4E00455F47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 26F372D51B021C4E00455F47 /* Project object */;
+}

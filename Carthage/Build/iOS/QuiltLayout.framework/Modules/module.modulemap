@@ -1,0 +1,6 @@
+framework module QuiltLayout {
+  umbrella header "QuiltLayout.h"
+
+  export *
+  module * { export * }
+}
