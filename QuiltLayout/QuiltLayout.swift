@@ -36,7 +36,7 @@ public class QuiltLayout: UICollectionViewLayout {
     }
     
     public func layoutHeight() -> CGFloat {
-        return furthestBlockPoint.y + blockPixels.height
+        return (1 + furthestBlockPoint.y) * blockPixels.height
     }
     
     private var firstOpenSpace = CGPointZero
