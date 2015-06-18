@@ -43,7 +43,7 @@ public class QuiltLayout: UICollectionViewLayout {
     private var firstOpenSpace = CGPointZero
     private var previousLayoutRect = CGRectZero
     private var lastIndexPathPlaced: NSIndexPath?
-    private var previousLayoutAttributes: [AnyObject]?
+    private var previousLayoutAttributes: [UICollectionViewLayoutAttributes]?
     private var indexPathByPosition: [NSNumber: [NSNumber: NSIndexPath]]?
     private var positionByIndexPath: [NSNumber: [NSNumber: NSValue]]?
     
@@ -61,7 +61,7 @@ public class QuiltLayout: UICollectionViewLayout {
         return CGSizeZero
     }
     
-    public override func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject]? {
+    public override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         if CGRectEqualToRect(rect, previousLayoutRect) {
             return previousLayoutAttributes
         }
@@ -69,9 +69,9 @@ public class QuiltLayout: UICollectionViewLayout {
         
         let isVertical = direction == .Vertical
         
-        var unrestrictedDimensionStart = Int(isVertical ? CGRectGetMinY(rect) / blockPixels.height : CGRectGetMinX(rect) / blockPixels.width)
-        var unrestrictedDimensionLength = 1 + Int(isVertical ? CGRectGetHeight(rect) / blockPixels.height : CGRectGetWidth(rect) / blockPixels.width)
-        var unrestrictedDimensionEnd: Int = unrestrictedDimensionStart + unrestrictedDimensionLength
+        let unrestrictedDimensionStart = Int(isVertical ? CGRectGetMinY(rect) / blockPixels.height : CGRectGetMinX(rect) / blockPixels.width)
+        let unrestrictedDimensionLength = 1 + Int(isVertical ? CGRectGetHeight(rect) / blockPixels.height : CGRectGetWidth(rect) / blockPixels.width)
+        let unrestrictedDimensionEnd: Int = unrestrictedDimensionStart + unrestrictedDimensionLength
         
         fillInBlocks(toUnrestrictedRow: prelayoutEverything ? Int.max : unrestrictedDimensionEnd)
         
@@ -79,8 +79,9 @@ public class QuiltLayout: UICollectionViewLayout {
         
         traverseTilesBetween(unrestrictedDimensionStart: unrestrictedDimensionStart, unrestrictedDimensionEnd: unrestrictedDimensionEnd) {
             [unowned self] (point) -> Bool in
-            if let indexPath = self.indexPath(forPosition: point) {
-                attributes.append(self.layoutAttributesForItemAtIndexPath(indexPath))
+            if let indexPath = self.indexPath(forPosition: point),
+                layoutAttributes = self.layoutAttributesForItemAtIndexPath(indexPath) {
+                attributes.append(layoutAttributes)
             }
             return true
         }
@@ -89,10 +90,10 @@ public class QuiltLayout: UICollectionViewLayout {
         return previousLayoutAttributes
     }
     
-    public override func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes! {
-        var insets = delegate?.collectionView?(collectionView!, layout: self, insetsForItemAtIndexPath: indexPath) ?? UIEdgeInsetsZero
-        var rect = frame(forIndexPath: indexPath)
-        var attributes = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath)
+    public override func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
+        let insets = delegate?.collectionView?(collectionView!, layout: self, insetsForItemAtIndexPath: indexPath) ?? UIEdgeInsetsZero
+        let rect = frame(forIndexPath: indexPath)
+        let attributes = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath)
         attributes.frame = UIEdgeInsetsInsetRect(rect, insets)
         return attributes
     }
@@ -101,11 +102,11 @@ public class QuiltLayout: UICollectionViewLayout {
         return !CGSizeEqualToSize(newBounds.size, collectionView!.frame.size)
     }
     
-    public override func prepareForCollectionViewUpdates(updateItems: [AnyObject]!) {
+    public override func prepareForCollectionViewUpdates(updateItems: [UICollectionViewUpdateItem]) {
         super.prepareForCollectionViewUpdates(updateItems)
-        for item in updateItems as! [UICollectionViewUpdateItem] {
+        for item in updateItems as [UICollectionViewUpdateItem] {
             if item.updateAction == .Insert || item.updateAction == .Move {
-                fillInBlocks(toIndexPath: item.indexPathAfterUpdate!)
+                fillInBlocks(toIndexPath: item.indexPathAfterUpdate)
             }
         }
     }
@@ -129,7 +130,7 @@ public class QuiltLayout: UICollectionViewLayout {
             let isVertical = direction == .Vertical
             let scrollFrame = CGRect(origin: CGPoint(x: cv.contentOffset.x, y: cv.contentOffset.y),
                 size: cv.frame.size)
-            var unrestrictedRow = 1 + Int(isVertical ? CGRectGetMaxY(scrollFrame) / blockPixels.height : CGRectGetMaxX(scrollFrame) / blockPixels.width)
+            let unrestrictedRow = 1 + Int(isVertical ? CGRectGetMaxY(scrollFrame) / blockPixels.height : CGRectGetMaxX(scrollFrame) / blockPixels.width)
             fillInBlocks(toUnrestrictedRow: prelayoutEverything ? Int.max : unrestrictedRow)
             delegate?.collectionViewDidFinishLayout?(cv, layout: self)
         }
@@ -283,7 +284,7 @@ public class QuiltLayout: UICollectionViewLayout {
         indexPathByPosition?[restrictedPoint]?[unrestrictedPoint] = indexPath
     }
     
-    private func set(#indexPath: NSIndexPath, forPosition position: CGPoint) {
+    private func set(indexPath indexPath: NSIndexPath, forPosition position: CGPoint) {
         let section = NSNumber(integer: indexPath.section)
         let row = NSNumber(integer: indexPath.row)
         let innerDict = positionByIndexPath?[section]

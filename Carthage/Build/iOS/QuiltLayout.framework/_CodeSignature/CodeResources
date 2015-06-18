@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/QuiltLayout-Swift.h</key>
 		<data>
-		+KQeIOji3OUi4Y6cCULTXLVoI5k=
+		+GGRQF+rLV+VwotSIgcWE8moSgM=
 		</data>
 		<key>Headers/QuiltLayout.h</key>
 		<data>
@@ -14,23 +14,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		gnAY5RBTIIIaFVIJmuYdB5RBqck=
+		lPFcOqCmfbF0hoYWh5NRCn63MUI=
 		</data>
 		<key>Modules/QuiltLayout.swiftmodule/arm.swiftdoc</key>
 		<data>
-		c1q9SMXXpgWZKfeGOCTEL+WgRC8=
+		GEjIImdLkUTKLuI5+fio1/oOB/8=
 		</data>
 		<key>Modules/QuiltLayout.swiftmodule/arm.swiftmodule</key>
 		<data>
-		ONVjRCEouBTW9dUejSBjjCoTcyI=
+		MrNGWJnGAE4VDYaCaqsxY7jICNo=
 		</data>
 		<key>Modules/QuiltLayout.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		LIgIf6yCFeWEtxiiOX0TVK2oNdo=
+		48x0fklNxMB2xeOJ3Cp6hGah9ug=
 		</data>
 		<key>Modules/QuiltLayout.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		gTeaSy+RnOf12Yrhy9wUwv1oHUQ=
+		wfEZoCE1i6BfnOV7XzdJSVm84sQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -41,7 +41,7 @@
 	<dict>
 		<key>Headers/QuiltLayout-Swift.h</key>
 		<data>
-		+KQeIOji3OUi4Y6cCULTXLVoI5k=
+		+GGRQF+rLV+VwotSIgcWE8moSgM=
 		</data>
 		<key>Headers/QuiltLayout.h</key>
 		<data>
@@ -49,19 +49,19 @@
 		</data>
 		<key>Modules/QuiltLayout.swiftmodule/arm.swiftdoc</key>
 		<data>
-		c1q9SMXXpgWZKfeGOCTEL+WgRC8=
+		GEjIImdLkUTKLuI5+fio1/oOB/8=
 		</data>
 		<key>Modules/QuiltLayout.swiftmodule/arm.swiftmodule</key>
 		<data>
-		ONVjRCEouBTW9dUejSBjjCoTcyI=
+		MrNGWJnGAE4VDYaCaqsxY7jICNo=
 		</data>
 		<key>Modules/QuiltLayout.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		LIgIf6yCFeWEtxiiOX0TVK2oNdo=
+		48x0fklNxMB2xeOJ3Cp6hGah9ug=
 		</data>
 		<key>Modules/QuiltLayout.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		gTeaSy+RnOf12Yrhy9wUwv1oHUQ=
+		wfEZoCE1i6BfnOV7XzdJSVm84sQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4703C7C6-F7A3-44E1-9671-CDAA4DE5A936</string>
+	<key>IDESourceControlProjectName</key>
+	<string>QuiltLayoutExample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>11985A9A2D67B3D9C62FAF3F70214524EB9AE418</key>
+		<string>github.com:ramy-kfoury/QuiltLayout.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Example/QuiltLayoutExample/QuiltLayoutExample.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>11985A9A2D67B3D9C62FAF3F70214524EB9AE418</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:ramy-kfoury/QuiltLayout.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>11985A9A2D67B3D9C62FAF3F70214524EB9AE418</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>11985A9A2D67B3D9C62FAF3F70214524EB9AE418</string>
+			<key>IDESourceControlWCCName</key>
+			<string>QuiltLayout</string>
+		</dict>
+	</array>
+</dict>
+</plist>
