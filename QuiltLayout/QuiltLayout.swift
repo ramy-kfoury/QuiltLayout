@@ -78,9 +78,9 @@ public class QuiltLayout: UICollectionViewLayout {
         var attributes = [UICollectionViewLayoutAttributes]()
         
         traverseTilesBetween(unrestrictedDimensionStart: unrestrictedDimensionStart, unrestrictedDimensionEnd: unrestrictedDimensionEnd) {
-            [unowned self] (point) -> Bool in
-            if let indexPath = self.indexPath(forPosition: point),
-                layoutAttributes = self.layoutAttributesForItemAtIndexPath(indexPath) {
+            [weak self] (point) -> Bool in
+            if let indexPath = self?.indexPath(forPosition: point),
+                layoutAttributes = self?.layoutAttributesForItemAtIndexPath(indexPath) {
                 attributes.append(layoutAttributes)
             }
             return true
@@ -238,33 +238,36 @@ public class QuiltLayout: UICollectionViewLayout {
         let isVertical = direction == .Vertical
         
         return !traverseOpenTiles {
-            [unowned self] blockOrigin in
+            [weak self] blockOrigin in
             
             // we need to make sure each square in the desired
             // area is available before we can place the square
-            let didTraverseAllBlocks = self.traverseTiles(forPoint: blockOrigin, withSize: size, iterator: {
-                [unowned self] point in
-                let spaceAvailable: Bool = self.indexPath(forPosition: point) == nil
-                let inBounds: Bool = Int(isVertical ? point.x : point.y) < self.restrictedDimensionBlockSize()
-                let maximumRestrictedBoundSize: Bool = (isVertical ? blockOrigin.x : blockOrigin.y) == 0
-                if spaceAvailable && maximumRestrictedBoundSize && !inBounds {
+            if let strongSelf = self {
+                let didTraverseAllBlocks = strongSelf.traverseTiles(forPoint: blockOrigin, withSize: size, iterator: {
+                    [weak self] point in
+                    let spaceAvailable: Bool = self?.indexPath(forPosition: point) == nil
+                    let inBounds: Bool = Int(isVertical ? point.x : point.y) < self?.restrictedDimensionBlockSize()
+                    let maximumRestrictedBoundSize: Bool = (isVertical ? blockOrigin.x : blockOrigin.y) == 0
+                    if spaceAvailable && maximumRestrictedBoundSize && !inBounds {
+                        return true
+                    }
+                    
+                    return spaceAvailable && inBounds
+                    })
+                
+                if !didTraverseAllBlocks {
                     return true
                 }
                 
-                return spaceAvailable && inBounds
-            })
-            
-            if !didTraverseAllBlocks {
-                return true
+                strongSelf.set(indexPath: indexPath, forPosition: blockOrigin)
+                strongSelf.traverseTiles(forPoint: blockOrigin, withSize: size, iterator: {
+                    [weak self] blockPoint in
+                    self?.set(position: blockPoint, forIndexPath: indexPath)
+                    self?.setFurthestBlockPoint(blockPoint)
+                    return true
+                    })
+                return false
             }
-            
-            self.set(indexPath: indexPath, forPosition: blockOrigin)
-            self.traverseTiles(forPoint: blockOrigin, withSize: size, iterator: {
-                [unowned self] blockPoint in
-                self.set(position: blockPoint, forIndexPath: indexPath)
-                self.setFurthestBlockPoint(blockPoint)
-                return true
-            })
             return false
         }
         

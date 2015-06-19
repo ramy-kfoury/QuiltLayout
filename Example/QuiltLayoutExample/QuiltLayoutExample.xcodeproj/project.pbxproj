@@ -176,6 +176,7 @@
 		26F372FD1B03343F00455F47 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = Zalando;
 				TargetAttributes = {
@@ -439,6 +440,7 @@
 				26F373261B03343F00455F47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26F373271B03343F00455F47 /* Build configuration list for PBXNativeTarget "QuiltLayoutExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +449,7 @@
 				26F373291B03343F00455F47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

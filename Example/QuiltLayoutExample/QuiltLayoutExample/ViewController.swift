@@ -5,7 +5,7 @@
 import UIKit
 import QuiltLayout
 
-class ViewController: UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegate, QuiltLayoutDelegate {
+class ViewController: UICollectionViewController, QuiltLayoutDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,9 +49,9 @@ class Cell: UICollectionViewCell {
 extension UIColor {
     
     class func randomColor() -> UIColor{
-        var randomRed:CGFloat = CGFloat(drand48())
-        var randomGreen:CGFloat = CGFloat(drand48())
-        var randomBlue:CGFloat = CGFloat(drand48())
+        let randomRed:CGFloat = CGFloat(drand48())
+        let randomGreen:CGFloat = CGFloat(drand48())
+        let randomBlue:CGFloat = CGFloat(drand48())
         return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
     }
 }
