@@ -106,7 +106,7 @@ public class QuiltLayout: UICollectionViewLayout {
         super.prepareForCollectionViewUpdates(updateItems)
         for item in updateItems as [UICollectionViewUpdateItem] {
             if item.updateAction == .Insert || item.updateAction == .Move {
-                fillInBlocks(toIndexPath: item.indexPathAfterUpdate)
+                fillInBlocks(toIndexPath: item.indexPathAfterUpdate!)
             }
         }
     }
@@ -301,7 +301,7 @@ public class QuiltLayout: UICollectionViewLayout {
         var allTakenBefore = true
         let isVertical = direction == .Vertical
         var unrestrictedDimensionStart = Int(isVertical ? firstOpenSpace.y : firstOpenSpace.x)
-        for unrestrictedDimensionStart; ; unrestrictedDimensionStart++ {
+        for ; ; unrestrictedDimensionStart++ {
             for restrictedDimension in 0..<restrictedDimensionBlockSize() {
                 let point = CGPoint(x: isVertical ? restrictedDimension : unrestrictedDimensionStart, y: isVertical ? unrestrictedDimensionStart : restrictedDimension)
                 
