@@ -55,7 +55,7 @@ public class QuiltLayout: UICollectionViewLayout {
             if isVertical {
                 return CGSize(width: CGRectGetWidth(contentRect), height: blockPixels.height * (furthestBlockPoint.y+1))
             } else {
-                CGSize(width: blockPixels.width * (furthestBlockPoint.x+1), height: CGRectGetHeight(contentRect))
+                return CGSize(width: blockPixels.width * (furthestBlockPoint.x+1), height: CGRectGetHeight(contentRect))
             }
         }
         return CGSizeZero
